@@ -1,0 +1,14 @@
+prefix=/home/STO/ffmpeg6.0_sources/ffmpeg-build
+exec_prefix=${prefix}
+libdir=/home/STO/ffmpeg6.0_sources/ffmpeg-build/lib
+includedir=/home/STO/ffmpeg6.0_sources/ffmpeg-build/include
+
+Name: libavformat
+Description: FFmpeg container format library
+Version: 59.27.100
+Requires: 
+Requires.private: libavcodec >= 59.37.100, libswresample >= 4.7.100, libavutil >= 57.28.100
+Conflicts:
+Libs: -L${libdir}  -lavformat 
+Libs.private: -lm -latomic -lbz2 -LD:/Software/msys64/mingw64/bin/../lib -lz -LD:/Software/msys64/mingw64/bin/../lib -lssl -lcrypto -lws2_32
+Cflags: -I${includedir}

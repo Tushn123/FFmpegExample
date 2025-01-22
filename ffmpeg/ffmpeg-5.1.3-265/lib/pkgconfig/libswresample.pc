@@ -1,0 +1,14 @@
+prefix=/home/STO/ffmpeg6.0_sources/ffmpeg-build
+exec_prefix=${prefix}
+libdir=/home/STO/ffmpeg6.0_sources/ffmpeg-build/lib
+includedir=/home/STO/ffmpeg6.0_sources/ffmpeg-build/include
+
+Name: libswresample
+Description: FFmpeg audio resampling library
+Version: 4.7.100
+Requires: 
+Requires.private: libavutil >= 57.28.100
+Conflicts:
+Libs: -L${libdir}  -lswresample 
+Libs.private: -lm -latomic
+Cflags: -I${includedir}

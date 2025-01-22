@@ -1,0 +1,14 @@
+prefix=/home/STO/ffmpeg6.0_sources/ffmpeg-build
+exec_prefix=${prefix}
+libdir=/home/STO/ffmpeg6.0_sources/ffmpeg-build/lib
+includedir=/home/STO/ffmpeg6.0_sources/ffmpeg-build/include
+
+Name: libavutil
+Description: FFmpeg utility library
+Version: 57.28.100
+Requires: 
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavutil 
+Libs.private: -lm -luser32 -lbcrypt -latomic
+Cflags: -I${includedir}
